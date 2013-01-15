@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<p>
+What about inheritance?
+</p>
+
+<p>
+View source to see tests.
+</p>
+
+<script src="assert.js"></script>
+
+<script>
+	function A(a) {
+		this.varA = a;
+	}
+	
+	A.prototype.subtractFromA = function(b) {
+		this.varA -= b;
+	};
+	
+	function B(x, y) {
+		A.call(this, a);
+		this.y = y;
+	}
+	
+	B.prototype = new A(0);
+	
+	B.prototype.subtractFromY = function(z) {
+		this.y += z;
+	};
+	
+	var test1 = new A(10);
+	assert(test1.varA === 10);
+	test1.subtractFromA(1);
+	test1.subtractFromA(2);
+	assert(test1.varA === 7);
+	
+	var test2 = new B(100, 100);
+	assert(b.x === 100);
+	assert(b.y === 100);
+	b.subtractFromY(50);
+	assert(b.x === 100);
+	b.addToY(1);
+	assert(b.y === 51);
+</script>
