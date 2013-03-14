@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+				
+		function Student(name, major, year) {
+			this.name = name;
+			this.major = major;
+			this.year = year;
+		}
+
+		var Adam = new Student ("Adam Weschler, "Computer Systems", 4);
+		Student.prototype.grade = "A";
+		
+		Student.prototype.sayInfo = function () {
+			alert('Student name: ' + Adam.name + '\n');
+			alert('Major: ' + Adam.major + '\n');
+			alert('Years in college: ' + Adam.year + '\n');
+			alert('Grade: ' + Adam.grade + '\n');
+		</script>
+	</body>
+</html>
