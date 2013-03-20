@@ -1,0 +1,3 @@
+var connect = require('connect')
+  , dir = process.argv.length > 2 ? process.argv[2] : __dirname;
+connect.createServer(connect.static(dir)).listen(5000);
